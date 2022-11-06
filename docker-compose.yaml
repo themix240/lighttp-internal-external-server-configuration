@@ -1,0 +1,12 @@
+version: "3.4"
+services:
+  server:
+    build: server_internal/
+    container_name: server
+    ports:
+      - "81:3000"
+  server_external:
+    build: server_external/
+    ports:
+      - "80:80"
+    container_name: server_external
